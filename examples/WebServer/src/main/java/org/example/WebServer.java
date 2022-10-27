@@ -43,35 +43,27 @@ public class WebServer {
                     // Get request
                     HttpRequest request = HttpRequest.parse(input);
                     queue.add_element(new Processor(socket, request));
-                    String data = request.getRequestLine();
+                    /*String data = request.getRequestLine();
                     String data1 = data.substring(5, 11);
                     System.out.println("lenght: " + data.length());
                         if (data1.equals("create")) {
                             String data2 = data.substring(12, (data.length() - 9));
                             System.out.println(data2);
                             createfile(data2);
-                            Processor create = new Processor(socket, request);
-                            create.process(1);
                         }
 
                         if (data1.equals("delete")) {
                             String data2 = data.substring(12, (data.length() - 9));
                             System.out.println(data2);
                             deletefile(data2);
-                            Processor delete = new Processor(socket, request);
-                            delete.process(2);
+
                         }
                         if (data1.equals("comput")) {
                             String data2 = data.substring(12, 20);
                             String data3 = data.substring(21, (data.length() - 9));
                             computefile(data2, data3);
-                            Processor computed = new Processor(socket, request);
-                            computed.process(3);
-                        }
-                    else{
-                        Processor processor = new Processor(socket, request);
-                        processor.process(4);
-                    }
+
+                        }*/
                 }catch (IOException ex) {
                     ex.printStackTrace();
                 }
